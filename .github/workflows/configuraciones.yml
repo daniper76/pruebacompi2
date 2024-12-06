@@ -33,7 +33,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'Proyecto/dist/'
+          path: 'Proyecto/build/'
 
   deploy:
     needs: build_site
@@ -49,5 +49,5 @@ jobs:
 
     steps:
       - name: Deploy
-        id: deployment
+        id: deployments
         uses: actions/deploy-pages@v4
