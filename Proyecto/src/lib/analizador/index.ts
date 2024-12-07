@@ -6,5 +6,5 @@ export default function parseInput(input: string) {
     } catch (e) {
         return e as string;
     }
-    return 'Todo bien';
+    return "La entrada proporcionada es correcta";
 }

@@ -25,7 +25,7 @@ cadena "cadena de texto"
     
 rango "rango" = "[" contenidoRango+ "]"
 
-subexpresion "sub-expresion" = "(" saltoLinea expresion saltoLinea (saltoLinea expresion saltoLinea)* ")"
+subexpresion "sub-expresion" = "(" saltoLinea tipoRegla saltoLinea (saltoLinea tipoRegla saltoLinea)* ")"
 
 contenidoRango "contenido del rango" = [^[\]-] "-" [^[\]-]
 			/ [^[\]]+

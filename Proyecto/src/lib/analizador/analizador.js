@@ -811,13 +811,13 @@ function peg$parse(input, options) {
     }
     if (s1 !== peg$FAILED) {
       s2 = peg$parsesaltoLinea();
-      s3 = peg$parseexpresion();
+      s3 = peg$parsetipoRegla();
       if (s3 !== peg$FAILED) {
         s4 = peg$parsesaltoLinea();
         s5 = [];
         s6 = peg$currPos;
         s7 = peg$parsesaltoLinea();
-        s8 = peg$parseexpresion();
+        s8 = peg$parsetipoRegla();
         if (s8 !== peg$FAILED) {
           s9 = peg$parsesaltoLinea();
           s7 = [s7, s8, s9];
@@ -830,7 +830,7 @@ function peg$parse(input, options) {
           s5.push(s6);
           s6 = peg$currPos;
           s7 = peg$parsesaltoLinea();
-          s8 = peg$parseexpresion();
+          s8 = peg$parsetipoRegla();
           if (s8 !== peg$FAILED) {
             s9 = peg$parsesaltoLinea();
             s7 = [s7, s8, s9];
