@@ -1,5 +1,5 @@
 gramatica
-  = regla (saltoLinea regla)*
+  = regla (saltoLinea regla saltoLinea)*
 
 regla "regla"
   = identificador saltoLinea "=" _ tipoRegla saltoLinea ";"

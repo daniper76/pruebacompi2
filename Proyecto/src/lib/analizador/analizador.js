@@ -407,7 +407,7 @@ function peg$parse(input, options) {
   }
 
   function peg$parsegramatica() {
-    var s0, s1, s2, s3, s4, s5;
+    var s0, s1, s2, s3, s4, s5, s6;
 
     s0 = peg$currPos;
     s1 = peg$parseregla();
@@ -417,7 +417,8 @@ function peg$parse(input, options) {
       s4 = peg$parsesaltoLinea();
       s5 = peg$parseregla();
       if (s5 !== peg$FAILED) {
-        s4 = [s4, s5];
+        s6 = peg$parsesaltoLinea();
+        s4 = [s4, s5, s6];
         s3 = s4;
       } else {
         peg$currPos = s3;
@@ -429,7 +430,8 @@ function peg$parse(input, options) {
         s4 = peg$parsesaltoLinea();
         s5 = peg$parseregla();
         if (s5 !== peg$FAILED) {
-          s4 = [s4, s5];
+          s6 = peg$parsesaltoLinea();
+          s4 = [s4, s5, s6];
           s3 = s4;
         } else {
           peg$currPos = s3;
